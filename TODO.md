@@ -1,21 +1,48 @@
-# RSI Pulse – To-Do List (Updated after Phase II)
+# RSI Pulse – To-Do List
 
 ## ✅ Completed
-- Backend Free & Premium modes implemented in `app.py`.
-- Frontend updated with Demo toggle, Free/Premium selector, and Scan Now button.
-- pubspec.yaml updated with `http` and `shared_preferences` dependencies.
-- iOS simulator issues resolved (device targeting by UDID and name).
-- Backend Base URL field removed from UI and code.
-- Introduced `--dart-define` for backend URL switching (local vs. remote).
-- Snapshot PDF created for archiving Phase II.
-- Git workflow updated: commit & push new `api.dart`.
+- Domain + Gmail setup (rsipulse.com, Google Form waitlist).
+- Backend live on Render:
+  - `/health`, `/scan`, `/scan?test=1`, `/symbols`.
+- Mobile app:
+  - Free Tab scanner with Demo/Live toggle.
+  - Connected to backend.
+  - Running on iOS simulator.
+- UI polish:
+  - Candidate cards, badges, shimmer loaders, error/empty states.
+- Navigation:
+  - Free Tab + Pro Tab (locked upsell).
+- Persistence:
+  - Save last scan results with SharedPreferences.
+  - Show cached results on app start.
+  - Display last scan timestamp.
+- QA polish:
+  - Tap = copy pair to clipboard.
+  - Long-press = open Binance app/browser.
+  - Improved error handling and shimmer effect.
 
-## ⏳ Pending
-- Result persistence (reload last scan on app start).
-- IAP scaffolding (lock Premium mode behind paywall).
-- QA polish (skeleton loader/shimmer, tap-to-open Binance pair or copy symbol).
-- Deluxe mode design (configurable triggers, background scans, saved setups).
-- Release prep (bundle identifier consistency, TestFlight, Android keystore).
+---
 
-## 📌 Next Step
-Move to **Phase III**: start with result persistence + basic QA polish before IAP scaffolding.
+## 🔜 Next Steps (Part V)
+1. **IAP Scaffolding**
+   - Lock Pro tab behind mock paywall.
+   - Add dev bypass flag.
+   - Prepare for real in-app purchases.
+
+2. **Backend Enhancements**
+   - Add RSI(6) / RSI(12) turning-up logic.
+   - Configurable thresholds via query params.
+   - Prepare support for `mode=deluxe`.
+
+3. **Release Prep**
+   - Ensure consistent bundle identifier (iOS + Android).
+   - Android keystore / iOS provisioning profiles.
+   - Write README for GitHub contributors (dev vs. prod setup).
+
+---
+
+## 📝 Future Ideas
+- Android build & emulator setup.
+- TestFlight distribution for real iPhone testing.
+- Landing page polish (replace Google Form redirect).
+- Monetization setup (tiers: Free, $1, $5.99).
